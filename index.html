@@ -1,39 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Juan Ignacio Di Naro</title>
-  <h1>Juan Ignacio Di Naro</h1>
-  <img src="foto.jpg" alt="foto">
-  <p><strong>PhD Candidate in Economics</strong></p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juan Ignacio Di Naro - PhD Candidate in Economics at Western University. Macroeconomics and International Macroeconomics.">
+    <title>Juan Ignacio Di Naro | Western University</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <p>
-    I'm a PhD candidate at <a href="https://economics.uwo.ca/">Western University</a>, interested in Macroeconomics. 
-  </p>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #4F2683; /* Western U Purple approx */
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --accent-color: #005580;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Merriweather', serif; /* Serif for reading text (Academic standard) */
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, nav a {
+            font-family: 'Lato', sans-serif; /* Sans-serif for headers */
+            font-weight: 700;
+        }
+
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav { margin-top: 10px; }
+        nav a {
+            margin-left: 20px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+        }
+        nav a:first-child { margin-left: 0; }
+
+        /* --- PROFILE SECTION --- */
+        .profile-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .profile-photo {
+            flex: 0 0 200px;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            border-radius: 4px; /* Slightly rounded corners looks more professional than circle for JMP */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        h1 { font-size: 2.2rem; margin-bottom: 5px; color: #222; }
+        .subtitle { font-size: 1.1rem; color: #666; margin-bottom: 15px; }
+
+        /* --- SECTIONS --- */
+        .section-title {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin: 40px 0 20px 0;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        .paper-entry { margin-bottom: 25px; }
+        .paper-title { font-weight: bold; font-size: 1.1rem; display: block; }
+        .paper-status { font-style: italic; color: #666; font-size: 0.9rem; }
+        .links-row { margin-top: 5px; font-family: 'Lato', sans-serif; font-size: 0.9rem; }
+        .links-row a { margin-right: 15px; }
+
+        /* --- JOB MARKET PAPER HIGHLIGHT --- */
+        .jmp-box {
+            background-color: #f0f4f8;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .jmp-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .profile-section { flex-direction: column; align-items: center; text-align: center; }
+            header { flex-direction: column; text-align: center; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .profile-photo { flex: 0 0 auto; max-width: 180px; }
+        }
+    </style>
 </head>
 <body>
-  <meta charset="UTF-8">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    img {
-      max-width: 150px;
-      border-radius: 100px;
-    }
-    .links a {
-      margin-right: 10px;
-    }
-  </style>
+    <div class="container">
+        
+        <header>
+            <div class="logo">Juan Ignacio Di Naro</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#research">Research</a>
+                <a href="#teaching">Teaching</a>
+                <a href="cv.pdf" target="_blank">CV (PDF)</a>
+            </nav>
+        </header>
 
+        <div class="profile-section">
+            <div class="profile-photo">
+                <img src="foto.jpg" alt="Juan Ignacio Di Naro">
+                <div style="margin-top:15px; text-align:center; font-size:0.9rem; font-family:'Lato',sans-serif;">
+                    <a href="mailto:tu_email@uwo.ca">Email Me</a><br>
+                    <a href="https://www.linkedin.com/in/juan-ignacio-d-810488b4/" target="_blank">LinkedIn</a> | 
+                    <a href="https://github.com/jidinaro" target="_blank">GitHub</a>
+                </div>
+            </div>
 
-  <div class="links">
-    <a href="https://www.linkedin.com/in/juan-ignacio-d-810488b4/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/jidinaro" target="_blank">GitHub</a>
-    <a href="cv.pdf" target="_blank">Download CV</a>
-  </div>
+            <div class="profile-info">
+                <h1>Juan Ignacio Di Naro</h1>
+                <div class="subtitle">PhD Candidate in Economics, Western University</div>
+                
+                <p>
+                    Welcome to my website. I am a Ph.D. candidate in Economics at <a href="https://economics.uwo.ca/" target="_blank">Western University</a>.
+                </p>
+                <br>
+                <p>
+                    My primary research interests lie in <strong>Macroeconomics</strong> and <strong>International Macroeconomics</strong>.
+                </p>
+                <br>
+                <p>
+                    I will be available for interviews during the 2025-2026 Job Market.
+                </p>
+            </div>
+        </div>
+
+        <h2 id="research" class="section-title">Research</h2>
+
+        <div class="jmp-box">
+            <div class="paper-entry">
+                <span class="paper-title"><span class="jmp-badge">Job Market Paper</span> Title of Your Job Market Paper</span>
+                <div class="links-row">
+                    <a href="jmp.pdf" target="_blank">[Download PDF]</a>
+                    <a href="#">[Online Appendix]</a>
+                </div>
+                <p style="margin-top: 10px; font-size: 0.95rem;">
+                    <strong>Abstract:</strong> Here you should place the abstract of your JMP. Make it clear, concise, and engaging. Since this is the most critical part of your portfolio, ensure this abstract perfectly summarizes your contribution. (Replace this text with your actual abstract).
+                </p>
+            </div>
+        </div>
+
+        <h3>Working Papers</h3>
+        <br>
+        <div class="paper-entry">
+            <span class="paper-title">Secondary Paper Title</span>
+            <span class="paper-status">Under Review at Journal of International Economics</span>
+            <div class="links-row">
+                <a href="#">[PDF]</a>
+            </div>
+            <p>Short one-sentence summary of what this paper does if desired.</p>
+        </div>
+
+        <div class="paper-entry">
+            <span class="paper-title">Another Working Paper</span>
+            <span class="paper-status">Work in progress</span>
+        </div>
+
+        <h2 id="teaching" class="section-title">Teaching</h2>
+        <p><strong>Western University</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Instructor, Macroeconomics I (Undergraduate), Fall 2024</li>
+            <li>Teaching Assistant, International Finance, 2022-2023</li>
+        </ul>
+
+    </div>
+
 </body>
 </html>
