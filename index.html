@@ -43,13 +43,24 @@
             margin: 40px auto;
             background: #fff;
             padding: 40px;
+            /* Quitamos el padding-top del contenedor para manejarlo en el header y evitar huecos */
+            padding-top: 0; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-radius: 4px;
         }
 
-        /* --- HEADER & NAV --- */
+        /* --- HEADER & NAV (MODIFICADO PARA STICKY) --- */
         header {
+            /* PROPIEDADES PARA CONGELAR EL PANEL */
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: #fff; /* Fondo blanco solido para tapar el texto al scrollear */
+            z-index: 1000; /* Asegura que este por encima de todo */
+            
+            /* Ajustes visuales */
             border-bottom: 1px solid #eee;
+            padding-top: 40px; /* Padding interno para compensar el del container */
             padding-bottom: 20px;
             margin-bottom: 30px;
             display: flex;
@@ -100,6 +111,10 @@
             margin: 40px 0 20px 0;
             font-size: 1.4rem;
             color: var(--primary-color);
+            
+            /* Ajuste para el ancla del scroll (scroll-margin-top) */
+            /* Esto hace que cuando hagas click en "Research", el titulo no quede tapado por el header */
+            scroll-margin-top: 140px; 
         }
 
         .paper-entry { margin-bottom: 25px; }
@@ -130,7 +145,7 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .profile-section { flex-direction: column; align-items: center; text-align: center; }
-            header { flex-direction: column; text-align: center; gap: 15px; }
+            header { flex-direction: column; text-align: center; gap: 15px; padding-bottom: 15px;}
             nav a { margin: 0 10px; }
             .profile-photo { flex: 0 0 auto; max-width: 180px; }
         }
@@ -183,8 +198,7 @@
                 <span class="paper-title"><span class="jmp-badge">Summer Paper</span> Currrency Depreciations, Credit Spreads and Imported Inputs</span>
                 <div class="links-row">
                     <a href="summer_paper_JIDN.pdf" target="_blank">[Download PDF]</a>
-                    /*<a href="#">[Online Appendix]</a>*/
-                </div>
+                   </div>
                 <p style="margin-top: 10px; font-size: 0.95rem;">
                     <strong>Abstract:</strong> This paper examines how exchange rate fluctuations interact with domestic financial intermediation and production in small open economies. Using macro and micro data, I show that depreciations are contractionary, temporarily inflationary, and reduce banks’ equity, where these effects are systematically stronger in emerging than in advanced economies. I rationalize this with a general-equilibrium model with imported-input production and bank net-worth constraints, where exchange rate movements arise endogenously. Higher imported-input costs and tighter credit conditions jointly propagate shocks. Simulations show that foreign rate hikes and net-worth shocks generate real depreciations, persistent recessions, and hump-shaped inflation, with greater openness amplifying volatility.
                 </p>
@@ -195,22 +209,12 @@
         <br>
         <div class="paper-entry">
             <span class="paper-title">Debt Sustainability & Government Deficits</span>
-           /* <span class="paper-status">Under Review at Journal of International Economics</span>
-            <div class="links-row">
-                <a href="#">[PDF]</a>
-            </div>*/
             <p>With Vu Cao</p>
         </div>
 
-        /*<div class="paper-entry">
-            <span class="paper-title">Another Working Paper</span>
-            <span class="paper-status">Work in progress</span>
-        </div>
-*/
         <h2 id="teaching" class="section-title">Teaching</h2>
         <p><strong>Western University</strong></p>
         <ul style="margin-left: 20px; margin-top: 10px;">
-            /*<li>Instructor, Macroeconomics I (Undergraduate), Fall 2024</li>*/
             <li>Teaching Assistant, 2023-Present</li>
         </ul>
         <p><strong>Universidad del Salvador</strong></p>
@@ -223,4 +227,3 @@
 
 </body>
 </html>
-
