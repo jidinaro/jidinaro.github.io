@@ -123,6 +123,21 @@
         .links-row { margin-top: 5px; font-family: 'Lato', sans-serif; font-size: 0.9rem; }
         .links-row a { margin-right: 15px; }
 
+        /* --- COLLAPSIBLE ABSTRACTS --- */
+        details.abstract { margin-top: 8px; }
+        details.abstract summary {
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            list-style: none;
+            display: inline-block;
+        }
+        details.abstract summary::-webkit-details-marker { display: none; }
+        details.abstract summary::before { content: "\25B8  "; }
+        details.abstract[open] summary::before { content: "\25BE  "; }
+        details.abstract p { margin-top: 8px; font-size: 0.95rem; }
+
         /* --- JOB MARKET PAPER HIGHLIGHT --- */
         .jmp-box {
             background-color: #f0f4f8;
@@ -180,11 +195,11 @@
                 <div class="subtitle">PhD Candidate in Economics, Western University</div>
                 
                 <p>
-                    Welcome to my website. I am a third-year Ph.D. candidate in Economics at <a href="https://economics.uwo.ca/" target="_blank">Western University</a>.
+                    Welcome to my website. I am a fourth-year Ph.D. candidate in Economics at <a href="https://economics.uwo.ca/" target="_blank">Western University</a>.
                 </p>
                 <br>
                 <p>
-                    My primary research interests lie in <strong>Macroeconomics</strong> and <strong>International Macroeconomics</strong>.
+                    My primary research interests lie in <strong>Macroeconomics</strong>, <strong>International Macroeconomics</strong> and <strong>Production Networks</strong>.
                 </p>
                 <br>
 
@@ -195,11 +210,33 @@
 
         <div class="jmp-box">
             <div class="paper-entry">
-                <span class="paper-title"><span class="jmp-badge">Last Working Paper</span> Currency Depreciations, Credit Spreads and Imported Inputs</span>
+                <span class="paper-title"><span class="jmp-badge">Job Market Paper</span> Production Networks under Exchange Rate Uncertainty</span>
+                <span class="paper-status">Work in progress</span>
+                <details class="abstract">
+                <summary>Abstract</summary>
+                <p>
+    [Draft, edit in your own words] This paper studies how exchange rate volatility
+    shapes the structure of production networks in small open economies. I extend an
+    endogenous production network model to an open economy, where firms choose between
+    domestic and imported input suppliers and exchange rate fluctuations act as an
+    input-cost risk. The model delivers how sourcing decisions respond to foreign and
+    domestic volatility, and what this implies for aggregate volatility and welfare.
+</p>
+                </details>
+            </div>
+        </div>
+
+        <h3>Working Papers</h3>
+        <br>
+        <div class="paper-entry">
+                <span class="paper-title">Currency Depreciations, Credit Spreads and Imported Inputs</span>
                 <div class="links-row">
                     <a href="summer_paper_JIDN.pdf" target="_blank">[Download PDF]</a>
-                   </div><p style="margin-top: 10px; font-size: 0.95rem;">
-    <strong>Abstract:</strong> 
+                    <a href="summer_paper_slides_JIDN.pdf" target="_blank">[Slides]</a>
+                </div>
+                <details class="abstract">
+                <summary>Abstract</summary>
+                <p>
     This paper investigates how exchange rate fluctuations interact with domestic 
     financial intermediation and production in small open economies. 
     
@@ -220,15 +257,11 @@
     real depreciations, persistent recessions, and hump-shaped inflation 
     dynamics, with greater openness amplifying volatility.
 </p>
-            </div>
+                </details>
         </div>
 
         <h3>Work in Progress</h3>
         <br>
-        <div class="paper-entry">
-            <span class="paper-title">Debt Sustainability & Investment Decisions</span>
-            <p>With Vu Cao</p>
-        </div>
         <div class="paper-entry">
             <span class="paper-title">Rationalizing Shrinkflation</span>
             <p>With Vu Cao</p>
@@ -249,9 +282,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
